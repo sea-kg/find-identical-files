@@ -97,7 +97,7 @@ def start_find():
             if _step_cur != _step:
                 # print(_step_cur, _idx)
                 _step_cur = _step
-                progressbar.step(_step_cur)
+                progressbar.step(1)
             # print(_file)
             _filesize = os.path.getsize(_file)
             if _filesize not in _filesizes:
@@ -117,7 +117,7 @@ def start_find():
             _step = int((_idx / _lenfiles1) * 100)
             if _step_cur != _step:
                 _step_cur = _step
-                progressbar.step(_step_cur)
+                progressbar.step(1)
             _len = len(_filesizes[_filesize])
             if _len > 1:
                 _filesizes_filtered[_filesize] = _filesizes[_filesize]
@@ -139,7 +139,7 @@ def start_find():
                 _step = int((_idx / _lenfiles2) * 100)
                 if _step_cur != _step:
                     _step_cur = _step
-                    progressbar.step(_step_cur)
+                    progressbar.step(1)
                 _len = len(_filesizes_filtered[_filesize])
                 if _len > 1:
                     # print(_filesize, len(_filesizes_filtered[_filesize]))
@@ -163,7 +163,7 @@ def start_find():
                 _step = int((_idx / _lenfiles3) * 100)
                 if _step_cur != _step:
                     _step_cur = _step
-                    progressbar.step(_step_cur)
+                    progressbar.step(1)
                 _len = len(_files_by_hashes[_hash])
                 if _len > 1:
                     _found_files_after_second_filter += _len
